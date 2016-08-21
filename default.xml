@@ -55,8 +55,8 @@
   <project name="platform_packages_apps_InCallUI" path="packages/apps/InCallUI" remote="rro" />
   <project name="platform_packages_apps_Launcher3" path="packages/apps/Launcher3" remote="rro" />
   <project name="platform_packages_apps_Mms" path="packages/apps/Mms" remote="rro" />
-  <project name="platform/packages/apps/Music" path="packages/apps/Music" remote="rro" />
-  <project name="platform/packages/apps/MusicFX" path="packages/apps/MusicFX" remote="rro" />
+  <project name="platform_packages_apps_Music" path="packages/apps/Music" remote="rro" />
+  <project name="platform_packages_apps_MusicFX" path="packages/apps/MusicFX" remote="rro" />
   <project name="platform_packages_apps_Nfc" path="packages/apps/Nfc" remote="rro" />
   <project name="platform_packages_apps_OTA" path="packages/apps/OTA" remote="rro" />
   <project name="platform_packages_apps_PhoneCommon" path="packages/apps/PhoneCommon" remote="rro" />
