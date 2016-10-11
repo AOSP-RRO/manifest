@@ -3,19 +3,20 @@
 
   <remote  name="github"
            fetch="https://github.com/" />
-           
+
   <remote  name="aosp"
            fetch="https://android.googlesource.com/" />
 
   <remote  name="rro"
            fetch="https://github.com/AOSP-RRO"
 	   revision="nougat" />
-	   
+
   <default revision="refs/tags/android-7.0.0_r6"
            remote="aosp"
-           sync-j="4" />
+           sync-j="4"
+           sync-c="true" />
 
-  <project name="platform_build" path="build" groups="pdk,tradefed" remote="rro" >
+  <project path="build" name="platform_build" groups="pdk,tradefed" remote="rro" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" />
@@ -24,14 +25,14 @@
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
-  
+
   <!-- AOSP-OMS -->
-  
+
   <project path="frameworks/base" name="platform_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="rro" />
   <project path="packages/providers/TelephonyProvider" name="platform_packages_providers_TelephonyProvider" groups="pdk-cw-fs,pdk-fs" remote="rro" />
   <project path="system/bt" name="platform_system_bt" groups="pdk" remote="rro" />
   <project path="packages/providers/MediaProvider" name="platform_packages_providers_MediaProvider" groups="pdk-cw-fs,pdk-fs" remote="rro" />
-  <project name="platform_packages_apps_Snap" path="packages/apps/Snap" groups="pdk" remote="rro" />
+  <project path="packages/apps/Snap" name="platform_packages_apps_Snap" groups="pdk" remote="rro" />
   <project path="packages/apps/Bluetooth" name="platform_packages_apps_Bluetooth" groups="pdk-cw-fs,pdk-fs" remote="rro" />
   <project path="system/core" name="platform_system_core" groups="pdk" remote="rro" />
   <project path="frameworks/av" name="platform_frameworks_av" groups="pdk" remote="rro" />
@@ -49,8 +50,8 @@
   <project path="bootable/recovery" name="platform_bootable_recovery" groups="pdk" remote="rro" />
   <project path="bionic" name="platform_bionic" groups="pdk" remote="rro" />
   <project path="art" name="platform_art" groups="pdk" remote="rro" />
-  <project name="platform_vendor_aosp" path="vendor/aosp" remote="rro" />
-  <project name="manifest" path="manifest" remote="rro" />
+  <project path="vendor/aosp" name="platform_vendor_aosp" remote="rro" />
+  <project path="manifest" name="manifest" remote="rro" />
   <project path="system/vold" name="platform_system_vold" groups="pdk" remote="rro" />
   <project path="system/extras" name="platform_system_extras" remote="rro" />
   <project path="system/media" name="platform_system_media" remote="rro" />
@@ -58,9 +59,9 @@
   <project path="external/f2fs-tools" name="platform_external_f2fs-tools" groups="pdk" remote="rro" />
   <project path="external/ipsec-tools" name="platform_external_ipsec-tools" groups="pdk-cw-fs,pdk-fs" remote="rro" />
   <project path="packages/apps/PhoneCommon" name="platform_packages_apps_PhoneCommon" groups="pdk-cw-fs,pdk-fs" remote="rro" />
-	
+
 <!-- CyanogenMod -->
-  
+
   <project path="hardware/qcom/audio/default" name="CyanogenMod/android_hardware_qcom_audio" groups="qcom,qcom_audio" revision="cm-14.0" remote="github" />
   <project path="hardware/qcom/audio-caf/apq8084" name="CyanogenMod/android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="github" revision="cm-14.0-caf-8084" />
   <project path="hardware/qcom/audio-caf/msm8916" name="CyanogenMod/android_hardware_qcom_audio" groups="qcom,qcom_audio" remote="github" revision="cm-14.0-caf-8916" />
@@ -116,14 +117,14 @@
   <project path="external/libnfc-nxp" name="CyanogenMod/android_external_libnfc-nxp" groups="pdk" remote="github" revision="cm-14.0" />
   <project path="external/tinyalsa" name="CyanogenMod/android_external_tinyalsa" groups="pdk" remote="github" revision="cm-14.0" />
   <project path="external/tinycompress" name="CyanogenMod/android_external_tinycompress" groups="pdk" remote="github" revision="cm-14.0" />
-  <project path="external/toybox" name="CyanogenMod/android_external_toybox" groups="pdk" remote="github" revision="cm-14.0" />  
+  <project path="external/toybox" name="CyanogenMod/android_external_toybox" groups="pdk" remote="github" revision="cm-14.0" />
   <project path="hardware/libhardware" name="CyanogenMod/android_hardware_libhardware" groups="pdk" remote="github" revision="cm-14.0" />
   <project path="hardware/libhardware_legacy" name="CyanogenMod/android_hardware_libhardware_legacy" groups="pdk" remote="github" revision="cm-14.0" />
   <project name="CyanogenMod/android_device_qcom_common" path="device/qcom/common" remote="github" revision="cm-14.0" />
   <project name="CyanogenMod/android_external_e2fsprogs" path="external/e2fsprogs" groups="pdk" remote="github" revision="cm-14.0" />
-  
+
   <!--AOSP -->
-  
+
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
   <project path="cts" name="platform/cts" groups="cts,pdk-cw-fs,pdk-fs" />
   <project path="developers/build" name="platform/developers/build" />
@@ -614,5 +615,5 @@
 
   <!-- masquerade -->
   <project path="packages/apps/masquerade" name="TeamSubstratum/masquerade" remote="github" revision="master" />
-	
+
 </manifest>
