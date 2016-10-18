@@ -18,6 +18,7 @@
 
   <project path="build" name="platform_build" groups="pdk,tradefed" remote="rro" >
     <copyfile src="core/root.mk" dest="Makefile" />
+    <copyfile src="build.sh" dest="build.sh" />
   </project>
   <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" />
   <project path="build/kati" name="platform_build_kati" groups="pdk,tradefed" remote="rro" />
