@@ -12,8 +12,9 @@
   <project name="CyanogenMod/android_hardware_sony_DASH" path="hardware/sony/DASH" remote="github" revision="cm-13.0" />
   <project name="CyanogenMod/android_hardware_sony_thermanager" path="hardware/sony/thermanager" remote="github" revision="cm-13.0" />
 
-  <project name="AOSP-RRO/device_sony_huashan" path="device/sony/huashan" remote="github" revision="marshmallow" />
-  <project name="CyanogenMod/android_kernel_sony_msm8960t" path="kernel/sony/msm8960t" remote="github" revision="cm-13.0" />
+  <project name="AOSP-RRO/device_sony_blue-common" path="device/sony/blue-common" remote="github" revision="marshmallow" />
+  <project name="AOSP-RRO/device_sony_hayabusa" path="device/sony/hayabusa" remote="github" revision="marshmallow" />
+  <project name="CyanogenMod/android_kernel_sony_msm8x60" path="kernel/sony/msm8x60" remote="github" revision="cm-13.0" />
   <project name="TheMuppets/proprietary_vendor_sony" path="vendor/sony" remote="github" clone-depth="1" revision="cm-13.0" />
 
 </manifest>
